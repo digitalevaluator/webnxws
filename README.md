@@ -27,3 +27,10 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+
+## Docker 
+Build  image    : docker build . -t webnxwsimg
+Run container   : docker run -p 4242:4242 -d webnxwsimg  
+docker run --hostname=75be5f57bf17 --user=node --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=NODE_VERSION=18.14.2 --env=YARN_VERSION=1.22.19 --env=NODE_ENV=production --workdir=/usr/src/app -p 4242:4242 --restart=no --runtime=runc -d webnxwsimg
+docker documentation:
