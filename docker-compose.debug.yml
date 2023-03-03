@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  webnxws:
+    image: webnxws
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3030:3030
+      - 4242:4242
+      - 5050:5050
+      - 6061:6061
+      - 9090:9090
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "index.js"]
